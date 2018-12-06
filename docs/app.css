@@ -296,3 +296,10 @@ table tbody tr:hover {
     flex-direction: column-reverse;
   }
 }
+
+.leftCol {
+    max-width: calc(33vw - 2em);
+}
+.box.node {
+    overflow: scroll;
+}

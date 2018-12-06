@@ -3,54 +3,68 @@
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="bci.css">
     <title>IPFS - Exchange Files</title>
   </head>
 
   <body ondragover="event.preventDefault()">
     <header>
-      <img width=200 src="assets/ipfs-logo.svg" alt="IPFS" />
+      
     </header>
 
     <main>
-      <div class="box node">
-        <h2>Node</h2>
 
-        <div>
-          <h3>ID</h3>
-          <pre class="node-id"></pre>
-        </div>
-
-        <div>
-          <h3>Addresses</h3>
-          <ul class="node-addresses"></ul>
-        </div>
-
-        <div>
-          <h3>Logs</h3>
-          <div>
-            <pre id="logs" class="success">Initializing node...</pre>
-          </div>
-        </div>
-      </div>
 
 
       <div class="columns">
-        <div id="peers" class="box disabled">
-          <h2>Peers</h2>
+        <div id="leftCol" class="leftCol">
+          <div class="box node">
+            <h2>Node</h2>
 
-          <div class="input-button">
-            <input id="multiaddr-input" type="text" placeholder="Multiaddr" disabled />
-            <button id="peer-btn" disabled>Connect</button>
+            <div>
+              <h3>ID</h3>
+              <pre class="node-id"></pre>
+            </div>
+
+            <div>
+              <h3>Addresses</h3>
+              <ul class="node-addresses"></ul>
+            </div>
+
+            <div>
+              <h3>Logs</h3>
+              <div>
+                <pre id="logs" class="success">Initializing node...</pre>
+              </div>
+            </div>
           </div>
+          <div id="logos" class="logoDiv">
+            <img src="assets/ipfs-logo.svg" alt="IPFS" class="ipfsLogo" />
+            <img src="assets/PoweredBy_White-01.png" alt="BCI" class="bciLogo" />
+          </div>
+          <div class="box info">
+            <h2 class="infoHeader">What is IPFS?</h2>
+            <span class="infoMessage">IPFS is a protocol that allows users to collaborate to store files on personal computers around the world. All records are stored using a unique hash signature, and can be uploaded and downloaded from the network of computers, or swarm by anyone, anywhere. Try it for yourself in this window by uploading a file. Once the file is uploaded, copy the 'LINK' attribute and send it to friends so they can try. </span>
+            <span class="infoFocus">With IPFS, your files are never stored on a central server, and no one can ever take them away from you.</span>
+            
+          </div>
+          <div id="peers" class="box disabled">
+            <h2>Peers</h2>
 
-          <table>
-            <thead>
-              <tr>
-                <th>Connected Peers</th>
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
+            <div class="input-button">
+              <input id="multiaddr-input" type="text" placeholder="Multiaddr" disabled />
+              <button id="peer-btn" disabled>Connect</button>
+            </div>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>Connected Peers</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
         </div>
 
         <div id="files" class="box disabled" ondragover="event.preventDefault()">
@@ -75,6 +89,7 @@
               <tr>
                 <th>Name</th>
                 <th>CID</th>
+                <th>Link</th>
                 <th>Size</th>
               </tr>
             </thead>

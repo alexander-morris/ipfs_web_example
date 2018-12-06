@@ -1,0 +1,21 @@
+
+.leftCol {
+    max-width: calc(33vw - 2em);
+}
+.box.node {
+    overflow: scroll;
+}
+th {
+    min-width: 8em;
+}
+img.bciLogo {
+    width: 15vw;
+    padding-bottom: 2em;
+}
+img.ipfsLogo {
+    width: 15vw;
+    padding-bottom: 1.5em;
+}
+span.infoMessage {
+    margin-bottom: 1em;
+}
