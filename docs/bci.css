@@ -19,3 +19,10 @@ img.ipfsLogo {
 span.infoMessage {
     margin-bottom: 1em;
 }
+a.bci_link_quiet {
+    color: unset;
+    text-decoration: none;
+}
+a.bci_link_quiet:hover {
+    color: #77c4ca;
+}
